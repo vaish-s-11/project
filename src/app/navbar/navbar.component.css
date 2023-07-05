@@ -1,0 +1,38 @@
+.navbar{
+  background-color:  #ae6aaa;
+}
+
+
+.navbar-dropdown-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-dropdown-button:hover {
+  border-radius: 50%; /* Apply circular border radius on hover */
+  background-color: rgba(255, 255, 255, 0.1); /* Adjust the background color as desired */
+}
+
+.navbar-dropdown-button:focus {
+  outline: none;
+}
+
+.mat-menu-content {
+  border-radius: 0; /* Remove the border radius for the menu content */
+}
+
+/* @font-face {
+  font-family: 'Philosopher Bold Italic';
+  src: url('../assets/Philosopher-BoldItalic.ttf') format('truetype');
+}
+
+.navbar-title {
+  font-family: 'Philosopher Bold Italic', sans-serif;
+} */
+

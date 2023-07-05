@@ -1,0 +1,207 @@
+{
+  "seating": [
+    {
+      "id": 1,
+      "row": "A",
+      "seatNumber": 1,
+      "occupied": false
+    },
+    {
+      "id": 2,
+      "row": "A",
+      "seatNumber": 2,
+      "occupied": false
+    },
+    {
+      "id": 3,
+      "row": "A",
+      "seatNumber": 3,
+      "occupied": true
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "loginusers": [
+    {
+      "userEmail": "movie@gmail.com",
+      "userPassword": "cGFzcw=="
+    },
+    {
+      "userEmail": "theatre@gmail.com",
+      "userPassword": "dGhlYQ=="
+    },
+    {
+      "userEmail": "ticket@gmail.com",
+      "userPassword": "dGljaw=="
+    },
+    {
+      "userEmail": "booking@gmail.com",
+      "userPassword": "Ym9vaw=="
+    }
+  ],
+  "signupusers": [
+    {
+      "userEmail": "vaish@gmail.com",
+      "userPassword": "dmFpc2g=",
+      "id": 1
+    },
+    {
+      "userName": "ragaparry",
+      "userEmail": "rp@gmail.com",
+      "userMobile": "222222222",
+      "userPassword": "cnB2YWlzaA==",
+      "id": 2
+    },
+    {
+      "userName": "parry",
+      "userEmail": "rp@gmail.com",
+      "userMobile": "222222222",
+      "userPassword": "cGFycnk=",
+      "id": 3
+    },
+    {
+      "userName": "vp",
+      "userEmail": "vp@gmail.com",
+      "userMobile": "1111111111",
+      "userPassword": "dnAxMQ==",
+      "id": 4
+    },
+    {
+      "userName": "lilly",
+      "userEmail": "lilly@gmail.com",
+      "userMobile": "444444444",
+      "userPassword": "bGlsbHk=",
+      "id": 5
+    },
+    {
+      "userName": "",
+      "userEmail": "",
+      "userMobile": "",
+      "userPassword": "",
+      "id": 6
+    },
+    {
+      "userName": "me",
+      "userEmail": "me@gmail.com",
+      "userMobile": "1111111111",
+      "userPassword": "bWU=",
+      "id": 7
+    },
+    {
+      "userName": "vaish",
+      "userEmail": "vaishh@gmail.com",
+      "userMobile": "8056797173",
+      "userPassword": "VmFpc2gxMUA=",
+      "id": 8
+    },
+    {
+      "userName": "v",
+      "userEmail": "v@gmail.com",
+      "userMobile": "8056797173",
+      "userPassword": "VmFpc2huYXZpQDEx",
+      "id": 9
+    },
+    {
+      "userName": "Akash",
+      "userEmail": "akash@gmail.com",
+      "userMobile": "1111111111",
+      "userPassword": "QWthc2gxMSQ=",
+      "id": 10
+    },
+    {
+      "userName": "v",
+      "userEmail": "v@gmail.com",
+      "userMobile": "1234567890",
+      "userPassword": "VjExMTExMSMjYQ==",
+      "id": 11
+    },
+    {
+      "userName": "vaish",
+      "userEmail": "vasih@gmail.com",
+      "userMobile": "1234567890",
+      "userPassword": "VmFpc2gxMUA=",
+      "id": 12
+    },
+    {
+      "userName": "me",
+      "userEmail": "me@gmail.com",
+      "userMobile": "9876543234",
+      "userPassword": "TWVAMTEyNjIw",
+      "id": 13
+    },
+    {
+      "userName": "vaishu",
+      "userEmail": "vaishu@gmail.com",
+      "userMobile": "8056797173",
+      "userPassword": "VnBAMTEyNjIwMjg=",
+      "id": 14
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "title": "ADIPURUSH",
+      "image": "https://cdn.bollywoodmdb.com/fit-in/movies/largethumb/2022/adipurush/adipurush-poster-4.jpg",
+      "status": "Coming Soon"
+    },
+    {
+      "id": 2,
+      "title": "Avatar 2",
+      "image": "https://wallpapercave.com/dwp1x/wp11685722.png",
+      "status": "Rating: 8/10"
+    },
+    {
+      "id": 3,
+      "title": "Veera Simha Reddy",
+      "image": "https://gallery.123telugu.com/content/slideshows/2022/11/Veera-Simha-Reddy-2/images/download.jpg",
+      "status": "Coming Soon"
+    },
+    {
+      "id": 4,
+      "title": "Dhamaka",
+      "image": "https://gallery.123telugu.com/content/slideshows/2022/09/Dhamaka21/images/Dhamaka.jpg",
+      "status": "Rating: 8.7/10"
+    },
+    {
+      "id": 5,
+      "title": "18 Pages",
+      "image": "https://i0.wp.com/www.newsbugz.com/wp-content/uploads/2021/06/18-Pages.jpg?resize=700%2C991&ssl=1",
+      "status": "Rating: 7.8/10"
+    },
+    {
+      "id": 6,
+      "title": "Varisu",
+      "image": "https://moviegalleri.net/wp-content/uploads/2022/06/Vijay-Varisu-Third-Look-Poster-HD-696x1045.jpg",
+      "status": "Coming Soon"
+    },
+    {
+      "id": 7,
+      "title": "Driver Jamuna",
+      "image": "https://moviegalleri.net/wp-content/uploads/2022/05/Driver-Jamuna-Aishwarya-Rajesh-First-Look-Poster-HD-1068x1566.jpg",
+      "status": "Rating: 8.3/10"
+    },
+    {
+      "id": 8,
+      "title": "ANT-MAN AND THE WASP",
+      "image": "https://terrigen-cdn-dev.marvel.com/content/prod/1x/antmanandthewaspquantumania_lob_crd_03.jpg",
+      "status": "Coming Soon"
+    },
+    {
+      "id": 9,
+      "title": "John Wick 4",
+      "image": "https://s.yimg.com/ny/api/res/1.2/pmUtag0_K2bi3ajFm2wxig--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTE0MjM7Y2Y9d2VicA--/https://media.zenfs.com/en/comingsoon_net_477/4cea1efe710c5b6f6c671fca3d068527",
+      "status": "Coming Soon"
+    },
+    {
+      "id": 10,
+      "title": "Transformers",
+      "image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/12/transformers-rise-of-the-beasts-poster.jpg?q=50&fit=crop&dpr=1.5",
+      "status": "Coming Soon"
+    }
+  ]
+}

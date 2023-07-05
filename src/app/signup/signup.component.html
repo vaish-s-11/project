@@ -1,0 +1,69 @@
+
+
+  
+ <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      html {
+        height: 100%;
+        background-image: url('../../assets/sign.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+  
+      .center-container {
+        text-align: center;
+      }
+      form{
+        width: 500px;
+        margin-top: 10px;
+      background-image: url('../../assets/sign.jpg');
+      }
+    </style>
+  </head>
+  <body>
+
+<form [formGroup]="signupForm" (ngSubmit)="signUp()">
+ <h2 style="text-align: center;font-size: 40px; color:  #ae6aaa;"><u>REGISTER</u></h2>
+  <label for="name">Name :</label>
+  <input type="text" formControlName="name" id="name" required>
+  <div class="error-message" *ngIf="signupForm.controls['name'].invalid && signupForm.controls['name'].touched">
+    <span>Please enter a valid name.</span>
+  </div>
+
+  <label for="email">Email :</label>
+  <input type="email" formControlName="email" id="email" required>
+  <div class="error-message" *ngIf="signupForm.controls['email'].invalid && signupForm.controls['email'].touched">
+    <span>Please enter a valid email.</span>
+  </div>
+
+  <label for="mobile">Mobile :</label>
+  <input type="text" formControlName="mobile" id="mobile" required>
+  <div class="error-message" *ngIf="signupForm.controls['mobile'].invalid && signupForm.controls['mobile'].touched">
+    <span>Please enter a 10-digit mobile number.</span>
+  </div>
+
+  <label for="password">Password :</label>
+  <input type="password" formControlName="password" id="password" required><br>
+  <div class="error-message" *ngIf="signupForm.controls['password'].invalid && signupForm.controls['password'].touched">
+    <span>Please enter a valid password.</span>
+  </div>
+
+  <div class="center-container">
+    <button type="submit">SIGN UP!</button>
+  </div></form>
+
+</body>
+</html>

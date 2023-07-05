@@ -1,0 +1,186 @@
+<div class="background-image">
+<div style="color: dodgerblue; font-weight: bolder;font-size: 30px; margin: 20px;text-align: center;" >{{moviename}}</div>
+<div class="the" >
+  <div class="center-container">
+    <div class="center-content">
+      <select class="center-select" (change)="getcompanyid($event)">
+        <option disabled selected value="">Available Theaters</option>
+        <option *ngFor="let option of array" value="{{option.name}}">
+          {{option.name}}
+        </option>
+      </select>
+    </div>
+  </div>
+  <!-- <input type="button" (click)="getVal()" value="submit"/> -->
+  <div style="text-align: center;">
+      <div style="margin-left: 30px;">
+      
+       <div class="center">
+       {{theatre}}
+      </div> 
+    
+      <div *ngIf="showTheatre">
+        <div *ngIf="ticket">
+          
+          <h2>DATES:</h2>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Select a date" (dateChange)="selectedDate = $event.value"
+                   [min]="minDate" [max]="maxDate" [matDatepickerFilter]="dateFilter" class="custom-input">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          
+          
+          
+          
+          <h2>SHOW TIMINGS:</h2>
+          <mat-form-field>
+            <mat-label>Movie Timing</mat-label>
+            <mat-select [(value)]="selectedTime" (selectionChange)="onTimeChange($event.value)">
+              <mat-option value="morning"> (9:30AM - 12:30PM)</mat-option>
+              <mat-option value="afternoon">(1:00PM - 4:00PM)</mat-option>
+              <mat-option value="evening"> (4:30PM - 7:30PM)</mat-option>
+              <mat-option value="night"> (8:00PM - 11:00PM)</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+          
+          
+          <br><br>
+          <h2>SEATINGS:</h2>
+          <h2>PLATINUM : Rs.200</h2><br>
+          <mat-button-toggle-group #toggleGroupA="matButtonToggleGroup" multiple (change)="calculatePrice()">
+            <mat-button-toggle value="A1:200">A1</mat-button-toggle>
+            <mat-button-toggle value="A2:200">A2</mat-button-toggle>
+            <mat-button-toggle value="A3:200">A3</mat-button-toggle>
+            <mat-button-toggle value="A4:200">A4</mat-button-toggle>
+            <mat-button-toggle value="A5:200">A5</mat-button-toggle>
+            <mat-button-toggle value="A6:200">A6</mat-button-toggle>
+            <mat-button-toggle value="A7:200">A7</mat-button-toggle>
+            <mat-button-toggle value="A8:200">A8</mat-button-toggle>
+            <mat-button-toggle value="A9:200">A9</mat-button-toggle>
+            <mat-button-toggle value="B0:200">B0</mat-button-toggle>
+          </mat-button-toggle-group>
+          
+         
+          <mat-button-toggle-group #toggleGroupB="matButtonToggleGroup" multiple (change)="calculatePrice()" style="margin-left: 70px;">
+            <mat-button-toggle value="B1:200">B1</mat-button-toggle>
+            <mat-button-toggle value="B2:200">B2</mat-button-toggle>
+            <mat-button-toggle value="B3:200">B3</mat-button-toggle>
+            <mat-button-toggle value="B4:200">B4</mat-button-toggle>
+            <mat-button-toggle value="B5:200">B5</mat-button-toggle>
+            <mat-button-toggle value="B6:200">B6</mat-button-toggle>
+            <mat-button-toggle value="B7:200">B7</mat-button-toggle>
+            <mat-button-toggle value="B8:200">B8</mat-button-toggle>
+            <mat-button-toggle value="B9:200">B9</mat-button-toggle>
+            <mat-button-toggle value="D0:200">C0</mat-button-toggle>
+          </mat-button-toggle-group>
+          <br><br>
+
+         
+          <mat-button-toggle-group #toggleGroupC="matButtonToggleGroup" multiple (change)="calculatePrice()">
+            <mat-button-toggle value="C1:200">C1</mat-button-toggle>
+            <mat-button-toggle value="C2:200">C2</mat-button-toggle>
+            <mat-button-toggle value="C3:200">C3</mat-button-toggle>
+            <mat-button-toggle value="C4:200">C4</mat-button-toggle>
+            <mat-button-toggle value="C5:200">C5</mat-button-toggle>
+            <mat-button-toggle value="C6:200">C6</mat-button-toggle>
+            <mat-button-toggle value="C7:200">C7</mat-button-toggle>
+            <mat-button-toggle value="C8:200">C8</mat-button-toggle>
+            <mat-button-toggle value="C9:200">C9</mat-button-toggle>
+            <mat-button-toggle value="D0:200">D0</mat-button-toggle>
+          </mat-button-toggle-group>
+          
+          <mat-button-toggle-group #toggleGroupD="matButtonToggleGroup" multiple (change)="calculatePrice()" style="margin-left: 40px;">
+            <mat-button-toggle value="D1:200">D1</mat-button-toggle>
+            <mat-button-toggle value="D2:200">D2</mat-button-toggle>
+            <mat-button-toggle value="D3:200">D3</mat-button-toggle>
+            <mat-button-toggle value="D4:200">D4</mat-button-toggle>
+            <mat-button-toggle value="D5:200">D5</mat-button-toggle>
+            <mat-button-toggle value="D6:200">D6</mat-button-toggle>
+            <mat-button-toggle value="D7:200">D7</mat-button-toggle>
+            <mat-button-toggle value="D8:200">D8</mat-button-toggle>
+            <mat-button-toggle value="D9:200">D9</mat-button-toggle>
+            <mat-button-toggle value="E0:200">E0</mat-button-toggle>
+          </mat-button-toggle-group>
+          <br><br>
+
+         
+          <mat-button-toggle-group #toggleGroupE="matButtonToggleGroup" multiple (change)="calculatePrice()" >
+            <mat-button-toggle value="E1:200">E1</mat-button-toggle>
+            <mat-button-toggle value="E2:200">E2</mat-button-toggle>
+            <mat-button-toggle value="E3:200">E3</mat-button-toggle>
+            <mat-button-toggle value="E4:200">E4</mat-button-toggle>
+            <mat-button-toggle value="E5:200">E5</mat-button-toggle>
+            <mat-button-toggle value="E6:200">E6</mat-button-toggle>
+            <mat-button-toggle value="E7:200">E7</mat-button-toggle>
+            <mat-button-toggle value="E8:200">E8</mat-button-toggle>
+            <mat-button-toggle value="E9:200">E9</mat-button-toggle>
+            <mat-button-toggle value="F0:200">F0</mat-button-toggle>
+          </mat-button-toggle-group>
+          
+          <mat-button-toggle-group #toggleGroupF="matButtonToggleGroup" multiple (change)="calculatePrice()" style="margin-left: 40px;">
+            <mat-button-toggle value="F1:200">F1</mat-button-toggle>
+            <mat-button-toggle value="F2:200">F2</mat-button-toggle>
+            <mat-button-toggle value="F3:200">F3</mat-button-toggle>
+            <mat-button-toggle value="F4:200">F4</mat-button-toggle>
+            <mat-button-toggle value="F5:200">F5</mat-button-toggle>
+            <mat-button-toggle value="F6:200">F6</mat-button-toggle>
+            <mat-button-toggle value="F7:200">F7</mat-button-toggle>
+            <mat-button-toggle value="F8:200">F8</mat-button-toggle>
+            <mat-button-toggle value="F9:200">F9</mat-button-toggle>
+            <mat-button-toggle value="G0:200">G0</mat-button-toggle>
+          </mat-button-toggle-group>
+          <br><br>
+
+          <h2>CLASSIC: Rs.100</h2><br>
+          <mat-button-toggle-group #toggleGroupG="matButtonToggleGroup" multiple (change)="calculatePrice()">
+            <mat-button-toggle value="G1:100">G1</mat-button-toggle>
+            <mat-button-toggle value="G2:100">G2</mat-button-toggle>
+            <mat-button-toggle value="G3:100">G3</mat-button-toggle>
+            <mat-button-toggle value="G4:100">G4</mat-button-toggle>
+            <mat-button-toggle value="G5:100">G5</mat-button-toggle>
+            <mat-button-toggle value="G6:100">G6</mat-button-toggle>
+            <mat-button-toggle value="G7:100">G7</mat-button-toggle>
+            <mat-button-toggle value="G8:100">G8</mat-button-toggle>
+            <mat-button-toggle value="G9:100">G9</mat-button-toggle>
+            <mat-button-toggle value="H0:100">H0</mat-button-toggle>
+          </mat-button-toggle-group>
+          
+          <mat-button-toggle-group #toggleGroupH="matButtonToggleGroup" multiple (change)="calculatePrice()" style="margin-left: 40px;">
+            <mat-button-toggle value="H1:100">H1</mat-button-toggle>
+            <mat-button-toggle value="H2:100">H2</mat-button-toggle>
+            <mat-button-toggle value="H3:100">H3</mat-button-toggle>
+            <mat-button-toggle value="H4:100">H4</mat-button-toggle>
+            <mat-button-toggle value="H5:100">H5</mat-button-toggle>
+            <mat-button-toggle value="H6:100">H6</mat-button-toggle>
+            <mat-button-toggle value="H7:100">H7</mat-button-toggle>
+            <mat-button-toggle value="H8:100">H8</mat-button-toggle>
+            <mat-button-toggle value="H9:100">H9</mat-button-toggle>
+            <mat-button-toggle value="I0:100">I0</mat-button-toggle>
+          </mat-button-toggle-group><br><br><br>
+          
+
+          <h2 style="color: red; background-color: grey;">SCREEN HERE</h2>
+          <div class="ticket-details" #content>
+          <h3>{{theatre}}</h3>
+          <p>Movie: {{moviename}}</p>
+          <p>Date: {{ selectedDate | date }}</p>
+          <p>Time: {{ getTimeLabel(selectedTime) }}</p>
+          <p>Seats: {{toggleGroupA.value}} {{toggleGroupB.value}} {{toggleGroupC.value}} {{toggleGroupD.value}} {{toggleGroupE.value}} {{toggleGroupF.value}} {{toggleGroupG.value}} {{toggleGroupH.value}}</p>
+          <p>Total Price: {{price}}</p>
+
+
+  <div class="buttons">
+    <button (click)="payy()" *ngIf="pa">Proceed Payment</button>
+    <button (click)="td()" *ngIf="down">Ticket Details</button>
+  </div>
+  
+</div>
+</div>
+        </div>             
+      </div>        
+    </div>
+  </div>
+</div>
+    

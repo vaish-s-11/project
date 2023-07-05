@@ -1,0 +1,149 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+
+  
+}
+h2 {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.mat-form-field {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10px;
+ 
+}
+.custom-input::placeholder {
+  /* background-color: #ae6aaa; */
+  color: #fff; /* Set the text color to white */
+  padding: 1px; /* Adjust padding as needed */
+  box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+
+mat-button-toggle {
+  color: wheat;
+  background-color: #ae6aaa;
+  border-radius: 10px;
+}
+
+mat-button-toggle-group {
+  border: none;
+  box-sizing: 500px;
+}
+
+mat-button-toggle:visited {
+  background-color: red;
+}
+
+mat-button-toggle:hover {
+  background-color: rgb(63, 62, 62);
+}
+
+::ng-deep .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+  background: rgb(67, 66, 66) !important;
+  color: rgba(0, 0, 0, .87);
+}
+::ng-deep.mat-typography{
+  background-image: url('../../assets/1268174.jpg');
+  background-size: cover  1000px;
+  background-repeat: no-repeat;
+  
+}
+
+.theaters {
+  background-color: white;
+  padding: 35px;
+  border-radius: 50px;
+  font-size: 35px;
+  font-weight: bolder;
+  border: none;
+  color: rgb(211, 136, 136);
+  display: flex;
+}
+
+.theaters:hover {
+  background-color: lightgray;
+  color: blue;
+}
+
+.ticket-details {
+  width: 400px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ticket-details h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ticket-details p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.ticket-details .buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.ticket-details button {
+  background-color: dodgerblue;
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ticket-details button:last-child {
+  background-color: crimson;
+}
+
+.center-select {
+  width: 200px;
+  height: 40px;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  
+}
+
+.center-select option {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #000;
+  background-color: #fff;
+}
+
+.center-container {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: 10vh;
+}
+
+.center-content {
+  text-align: left;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+}

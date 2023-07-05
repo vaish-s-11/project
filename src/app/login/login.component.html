@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<link rel="stylesheet" href="./login.component.css">
+<div class="background-image">
+<div class="center" >
+  <form>
+    <h1> <u>USER LOGIN</u></h1><br>
+    <div class="txt_field">
+      <h3>EMAIL ID :</h3>
+      <input type="text" id="uname" required placeholder="Enter your email" >
+    </div>
+    <div class="txt_field">
+      <h3>PASSWORD :</h3>
+      <input type="password" id="pwd" required style="color: rgb(13, 13, 14);" placeholder="Enter your password">
+    </div>
+    <button type="submit" (click)="loginUser()">LOGIN</button><br><br>
+    <div class="a" style="text-align: center;">
+      Not a member? <a [routerLink]="['/signup']">Signup</a>
+    </div><br>
+  </form>
+  <!-- Add the logout button
+  <button *ngIf="isLoggedIn" (click)="logoutUser()">Logout</button> -->
+</div>
+</div>
+</body>
+</html>
